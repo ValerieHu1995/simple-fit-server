@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.RelationUserWalletMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RelationUserWallet">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="buyer_id" jdbcType="INTEGER" property="buyerId" />
+    <result column="wallet_id" jdbcType="INTEGER" property="walletId" />
+    <result column="money" jdbcType="INTEGER" property="money" />
+    <result column="create_time" jdbcType="INTEGER" property="createTime" />
+    <result column="update_time" jdbcType="INTEGER" property="updateTime" />
+    <result column="validation" jdbcType="INTEGER" property="validation" />
+  </resultMap>
+</mapper>

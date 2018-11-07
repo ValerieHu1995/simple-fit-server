@@ -11,7 +11,7 @@
  Target Server Version : 50717
  File Encoding         : 65001
 
- Date: 07/11/2018 15:50:35
+ Date: 07/11/2018 16:19:00
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,7 @@ CREATE TABLE `info_credential` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL COMMENT '是否删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_detail_buyer
@@ -43,7 +43,7 @@ CREATE TABLE `info_detail_buyer` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL COMMENT '是否删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_detail_seller
@@ -57,7 +57,7 @@ CREATE TABLE `info_detail_seller` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_detail_trainer
@@ -71,7 +71,7 @@ CREATE TABLE `info_detail_trainer` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_lesson
@@ -84,7 +84,7 @@ CREATE TABLE `info_lesson` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_shop
@@ -99,7 +99,7 @@ CREATE TABLE `info_shop` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_user
@@ -121,7 +121,7 @@ CREATE TABLE `info_user` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_wallet
@@ -200,12 +200,12 @@ DROP TABLE IF EXISTS `relation_lesson_credential`;
 CREATE TABLE `relation_lesson_credential` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `lesson_id` int(11) DEFAULT NULL,
-  `credentail_id` int(11) DEFAULT NULL,
+  `credential_id` int(11) DEFAULT NULL,
   `create_time` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `update_time` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for relation_trainer_credential
@@ -214,7 +214,7 @@ DROP TABLE IF EXISTS `relation_trainer_credential`;
 CREATE TABLE `relation_trainer_credential` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `trainer_id` int(11) DEFAULT NULL,
-  `credentail_id` int(11) DEFAULT NULL,
+  `credential_id` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL COMMENT '0代表申请中，1代表申请成功，2代表申请失败，3代表过期',
   `obtain_time` varchar(50) DEFAULT NULL,
   `expire_time` varchar(50) DEFAULT NULL,
@@ -222,7 +222,7 @@ CREATE TABLE `relation_trainer_credential` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for relation_trainer_lesson
@@ -232,7 +232,7 @@ CREATE TABLE `relation_trainer_lesson` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL COMMENT '课程名',
   `trainer_credential_id` int(11) DEFAULT NULL COMMENT '不是 uid 请注意！',
-  `lesson_credentail_id` int(11) DEFAULT NULL,
+  `lesson_credential_id` int(11) DEFAULT NULL,
   `shop_id` int(11) DEFAULT NULL COMMENT '代表在哪儿上课',
   `capacity` int(11) DEFAULT NULL COMMENT '课程容量',
   `frequency` int(11) DEFAULT NULL COMMENT '上课次数',
@@ -244,7 +244,7 @@ CREATE TABLE `relation_trainer_lesson` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for relation_user_wallet

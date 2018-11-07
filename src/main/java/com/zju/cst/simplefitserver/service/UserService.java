@@ -9,4 +9,5 @@ public interface UserService {
     int insertSelective(InfoUser record);
 
     int updateByPrimaryKeySelective(InfoUser record);
+
 }

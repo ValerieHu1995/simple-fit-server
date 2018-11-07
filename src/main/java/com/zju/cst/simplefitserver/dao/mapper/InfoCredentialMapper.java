@@ -3,7 +3,6 @@ package com.zju.cst.simplefitserver.dao.mapper;
 import com.zju.cst.simplefitserver.model.InfoCredential;
 
 
-
 public interface InfoCredentialMapper {
     int deleteByPrimaryKey(Integer id);
 

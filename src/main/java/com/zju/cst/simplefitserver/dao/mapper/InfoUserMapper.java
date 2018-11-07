@@ -1,7 +1,6 @@
 package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.InfoUser;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 

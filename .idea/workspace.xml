@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88ee0cda-f076-4dbe-82a5-ccf0e13b1f54" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/SimpleFitServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/SimpleFitServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zju/cst/simplefitserver/SimpleFitServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zju/cst/simplefitserver/SimpleFitServerApplicationTests.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="simple-fit-server" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RelationTrainerLesson.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationTrainerLesson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1384#1385#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1673">
+              <caret line="195" column="27" selection-start-line="195" selection-start-column="27" selection-end-line="195" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoDetailBuyerMapper.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/classes/com/zju/cst/simplefitserver/dao/mapper/InfoDetailBuyerMapper.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoCredentialMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/target/classes/com/zju/cst/simplefitserver/dao/mapper/InfoCredentialMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoDetailBuyerMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/classes/com/zju/cst/simplefitserver/dao/mapper/InfoDetailBuyerMapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="RelationLessonCredential.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationLessonCredential.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RelationTrainerCredentialMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerCredentialMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RelationTrainerLessonMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerLessonMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RelationTrainerLessonMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerLessonMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="196" column="37" selection-start-line="196" selection-start-column="37" selection-end-line="196" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoCredentialMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoCredentialMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jackson-core</find>
+      <find>热部署</find>
+      <find>base</find>
+      <find>Base_Column_List</find>
+      <find>doGetAuthorizationInfo</find>
+      <find>UserService</find>
+      <find>username</find>
+      <find>qu</find>
+      <find>@S</find>
+      <find>quart</find>
+      <find>back</find>
+      <find>lom</find>
+      <find>error.</find>
+      <find>iorder</find>
+      <find>STDOUT</find>
+      <find>User login success</find>
+      <find>0</find>
+      <find>%i</find>
+      <find>log</find>
+      <find>string</find>
+      <find>mapperLocations</find>
+      <find>com.</find>
+      <find>selectByUsername</find>
+      <find>asdas</find>
+      <find>redis</find>
+      <find>getUserInfoByName</find>
+      <find>credent</find>
+      <find>tail</find>
+      <find>credentail</find>
+      <find>T</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/LogEntryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/LogLoginMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationBuyerLessonMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationBuyerTrainerLessonMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationLessonCredentialMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerCredentialMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerLessonMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationUserWalletMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/SimpleFitServerApplication.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationUserWalletMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationLessonCredentialMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationBuyerTrainerLessonMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationBuyerLessonMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/LogLoginMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/LogEntryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoWalletMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoShopMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoLessonMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoDetailTrainerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoDetailSellerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoDetailBuyerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoCredentialMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zju/cst/simplefitserver/SimpleFitServerApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoCredential.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoDetailBuyer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoDetailSeller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoDetailTrainer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoLesson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoShop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoWallet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/LogEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/LogLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationBuyerLesson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationBuyerTrainerLesson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationLessonCredential.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationUserWallet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/controller/config/UserShiroRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoUserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationTrainerCredential.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationTrainerLesson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerCredentialMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerLessonMapper.xml" />
+        <option value="$PROJECT_DIR$/target/classes/com/zju/cst/simplefitserver/dao/mapper/InfoCredentialMapper.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="simple-fit-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="simple-fit-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="799" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+              <item name="fit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simplefitserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simplefitserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zju" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zju" type="462c0819:PsiDirectoryNode" />
+              <item name="cst" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zju" type="462c0819:PsiDirectoryNode" />
+              <item name="cst" type="462c0819:PsiDirectoryNode" />
+              <item name="simplefitserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zju" type="462c0819:PsiDirectoryNode" />
+              <item name="cst" type="462c0819:PsiDirectoryNode" />
+              <item name="simplefitserver" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-fit-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-fit-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zju" type="462c0819:PsiDirectoryNode" />
+              <item name="cst" type="462c0819:PsiDirectoryNode" />
+              <item name="simplefitserver" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/pojo" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/controller/config" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SimpleFitServerApplication">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SimpleFitServerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-fit-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zju.cst.simplefitserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.zju.cst.simplefitserver" />
+      <option name="MAIN_CLASS_NAME" value="com.zju.cst.simplefitserver.SimpleFitServerApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SimpleFitServerApplicationTests.testCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-fit-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zju.cst.simplefitserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.zju.cst.simplefitserver" />
+      <option name="MAIN_CLASS_NAME" value="com.zju.cst.simplefitserver.SimpleFitServerApplicationTests" />
+      <option name="METHOD_NAME" value="testCache" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SimpleFitServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="simple-fit-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zju.cst.simplefitserver.SimpleFitServerApplication" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SimpleFitServerApplication" />
+      <item itemvalue="JUnit.SimpleFitServerApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.SimpleFitServerApplicationTests.testCache" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SimpleFitServerApplicationTests.testCache" />
+        <item itemvalue="JUnit.SimpleFitServerApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88ee0cda-f076-4dbe-82a5-ccf0e13b1f54" name="Default" comment="" />
+      <created>1541316335240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541316335240</updated>
+      <workItem from="1541316336831" duration="11265000" />
+      <workItem from="1541419819456" duration="657000" />
+      <workItem from="1541421293168" duration="1262000" />
+      <workItem from="1541422589272" duration="848000" />
+      <workItem from="1541423469955" duration="6214000" />
+      <workItem from="1541482915853" duration="28000" />
+      <workItem from="1541491820015" duration="6286000" />
+      <workItem from="1541513661980" duration="5779000" />
+      <workItem from="1541568258559" duration="9275000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.06 at 22h 47m 20s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.06 at 22h 55m 45s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.06 at 22h 56m 37s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.06 at 23h 24m 53s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.06 at 23h 25m 47s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.06 at 23h 30m 22s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.06 at 23h 32m 01s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.07 at 15h 46m 21s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.07 at 15h 50m 19s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleFitServerApplicationTests_testCache - 2018.11.07 at 15h 58m 28s.xml">
+      <configuration name="SimpleFitServerApplicationTests.testCache" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="41614000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297568" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" weight="0.26323318" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32905984" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33939394" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.66972476" visible="true" weight="0.26037195" />
+      <window_info anchor="bottom" id="Problems" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" sideWeight="0.33027524" side_tool="true" visible="true" weight="0.26037195" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoWalletMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoShopMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoLessonMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoDetailTrainerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoDetailSellerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoDetailBuyerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.3/shiro-core-1.2.3.jar!/org/apache/shiro/subject/Subject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/fit/2018-11-06/info.0.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10284" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/fit/2018-11-06/error.0.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/fit/2018-11-06/debug.0.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50791" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/controller/ExceptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zju/cst/simplefitserver/SimpleFitServerApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoCredentialMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoCredential.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoDetailBuyer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoDetailSeller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoDetailTrainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoLesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoShop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/InfoWallet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/LogEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/LogLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationBuyerLesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationBuyerTrainerLesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationUserWallet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/controller/config/UserShiroRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/controller/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/config/CacheConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerCredentialMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/fit/2018-11-07/info.0.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11422" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/SimpleFitServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/back.logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationTrainerCredential.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationLessonCredential.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/model/RelationTrainerLesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerCredentialMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerLessonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/RelationTrainerLessonMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="196" column="37" selection-start-line="196" selection-start-column="37" selection-end-line="196" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zju/cst/simplefitserver/dao/mapper/InfoCredentialMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1673">
+          <caret line="195" column="27" selection-start-line="195" selection-start-column="27" selection-end-line="195" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/zju/cst/simplefitserver/dao/mapper/InfoDetailBuyerMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/zju/cst/simplefitserver/dao/mapper/InfoDetailBuyerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/zju/cst/simplefitserver/dao/mapper/InfoCredentialMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>simple-fit-server</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

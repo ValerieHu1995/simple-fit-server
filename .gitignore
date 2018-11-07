@@ -24,11 +24,5 @@
 /nbdist/
 /.nb-gradle/
 
-src/main/java/com/company/project/core/
-src/main/java/com/company/project/configurer/
-src/main/java/com/company/project/service/
-src/main/java/com/company/project/web/
-src/main/java/com/company/project/dao/
-src/main/java/com/company/project/model/
+src/main/java/com/company/project/
 src/main/resources/mapper/
-src/main/resources/application.properties

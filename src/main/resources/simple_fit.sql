@@ -28,7 +28,7 @@ CREATE TABLE `info_credential` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL COMMENT '是否删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_detail_buyer
@@ -43,7 +43,7 @@ CREATE TABLE `info_detail_buyer` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL COMMENT '是否删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_detail_seller
@@ -57,7 +57,7 @@ CREATE TABLE `info_detail_seller` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_detail_trainer
@@ -71,7 +71,7 @@ CREATE TABLE `info_detail_trainer` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_lesson
@@ -84,7 +84,7 @@ CREATE TABLE `info_lesson` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_shop
@@ -99,7 +99,7 @@ CREATE TABLE `info_shop` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_user
@@ -121,7 +121,7 @@ CREATE TABLE `info_user` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for info_wallet
@@ -205,7 +205,7 @@ CREATE TABLE `relation_lesson_credential` (
   `update_time` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for relation_trainer_credential
@@ -222,7 +222,7 @@ CREATE TABLE `relation_trainer_credential` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for relation_trainer_lesson
@@ -244,7 +244,7 @@ CREATE TABLE `relation_trainer_lesson` (
   `update_time` varchar(50) DEFAULT NULL,
   `validation` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for relation_user_wallet

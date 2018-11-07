@@ -2,6 +2,8 @@ package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.InfoUser;
 
+import java.util.List;
+
 public interface InfoUserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -15,5 +17,6 @@ public interface InfoUserMapper {
 
     int updateByPrimaryKey(InfoUser record);
 
+//    List<InfoUser> selectAll(); 显示所有用户信息
     InfoUser selectByUsername(String username);
 }

@@ -9,7 +9,7 @@ public class RelationTrainerLesson implements Serializable {
 
     private Integer trainerCredentialId;
 
-    private Integer lessonCredentailId;
+    private Integer lessonId;
 
     private Integer shopId;
 
@@ -55,12 +55,12 @@ public class RelationTrainerLesson implements Serializable {
         this.trainerCredentialId = trainerCredentialId;
     }
 
-    public Integer getLessonCredentailId() {
-        return lessonCredentailId;
+    public Integer getLessonId() {
+        return lessonId;
     }
 
-    public void setLessonCredentailId(Integer lessonCredentailId) {
-        this.lessonCredentailId = lessonCredentailId;
+    public void setLessonId(Integer lessonId) {
+        this.lessonId = lessonId;
     }
 
     public Integer getShopId() {

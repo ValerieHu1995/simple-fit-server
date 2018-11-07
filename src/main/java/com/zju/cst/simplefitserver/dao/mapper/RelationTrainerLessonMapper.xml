@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="trainer_credential_id" property="trainerCredentialId" jdbcType="INTEGER" />
-    <result column="lesson_credentail_id" property="lessonCredentailId" jdbcType="INTEGER" />
+    <result column="lesson__id" property="lessonCredentialId" jdbcType="INTEGER" />
     <result column="shop_id" property="shopId" jdbcType="INTEGER" />
     <result column="capacity" property="capacity" jdbcType="INTEGER" />
     <result column="frequency" property="frequency" jdbcType="INTEGER" />
@@ -15,10 +15,10 @@
     <result column="confirm_seller" property="confirmSeller" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="VARCHAR" />
     <result column="update_time" property="updateTime" jdbcType="VARCHAR" />
-    <result column="validation" property="validation" jdbcType="INTEGER" />
+    <result column="validatCCCCion" property="validation" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, trainer_credential_id, lesson_credentail_id, shop_id, capacity, frequency, 
+    id, name, trainer_credential_id, lesson_credential_id, shop_id, capacity, frequency,
     time, status, confirm_trainer, confirm_seller, create_time, update_time, validation
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
@@ -33,12 +33,12 @@
   </delete>
   <insert id="insert" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson" >
     insert into relation_trainer_lesson (id, name, trainer_credential_id, 
-      lesson_credentail_id, shop_id, capacity, 
+      lesson_credential_id, shop_id, capacity,
       frequency, time, status, 
       confirm_trainer, confirm_seller, create_time, 
       update_time, validation)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{trainerCredentialId,jdbcType=INTEGER}, 
-      #{lessonCredentailId,jdbcType=INTEGER}, #{shopId,jdbcType=INTEGER}, #{capacity,jdbcType=INTEGER}, 
+      #{lessonCredentialId,jdbcType=INTEGER}, #{shopId,jdbcType=INTEGER}, #{capacity,jdbcType=INTEGER},
       #{frequency,jdbcType=INTEGER}, #{time,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
       #{confirmTrainer,jdbcType=INTEGER}, #{confirmSeller,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, 
       #{updateTime,jdbcType=VARCHAR}, #{validation,jdbcType=INTEGER})
@@ -55,8 +55,8 @@
       <if test="trainerCredentialId != null" >
         trainer_credential_id,
       </if>
-      <if test="lessonCredentailId != null" >
-        lesson_credentail_id,
+      <if test="lessonCredentialId != null" >
+        lesson_credential_id,
       </if>
       <if test="shopId != null" >
         shop_id,
@@ -99,8 +99,8 @@
       <if test="trainerCredentialId != null" >
         #{trainerCredentialId,jdbcType=INTEGER},
       </if>
-      <if test="lessonCredentailId != null" >
-        #{lessonCredentailId,jdbcType=INTEGER},
+      <if test="lessonCredentialId != null" >
+        #{lessonCredentialId,jdbcType=INTEGER},
       </if>
       <if test="shopId != null" >
         #{shopId,jdbcType=INTEGER},
@@ -143,8 +143,8 @@
       <if test="trainerCredentialId != null" >
         trainer_credential_id = #{trainerCredentialId,jdbcType=INTEGER},
       </if>
-      <if test="lessonCredentailId != null" >
-        lesson_credentail_id = #{lessonCredentailId,jdbcType=INTEGER},
+      <if test="lessonCredentialId != null" >
+        lesson_credential_id = #{lessonCredentialId,jdbcType=INTEGER},
       </if>
       <if test="shopId != null" >
         shop_id = #{shopId,jdbcType=INTEGER},
@@ -183,7 +183,7 @@
     update relation_trainer_lesson
     set name = #{name,jdbcType=VARCHAR},
       trainer_credential_id = #{trainerCredentialId,jdbcType=INTEGER},
-      lesson_credentail_id = #{lessonCredentailId,jdbcType=INTEGER},
+      lesson_credential_id = #{lessonCredentialId,jdbcType=INTEGER},
       shop_id = #{shopId,jdbcType=INTEGER},
       capacity = #{capacity,jdbcType=INTEGER},
       frequency = #{frequency,jdbcType=INTEGER},

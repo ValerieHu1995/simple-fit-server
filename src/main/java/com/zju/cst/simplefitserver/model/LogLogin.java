@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.model;
 
-public class LogLogin {
+import java.io.Serializable;
+
+public class LogLogin implements Serializable {
     private Integer id;
 
     private Integer userId;

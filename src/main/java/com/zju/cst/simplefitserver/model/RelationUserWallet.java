@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.model;
 
-public class RelationUserWallet {
+import java.io.Serializable;
+
+public class RelationUserWallet implements Serializable {
     private Integer id;
 
     private Integer buyerId;

@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.model;
 
-public class InfoDetailSeller {
+import java.io.Serializable;
+
+public class InfoDetailSeller implements Serializable {
     private Integer id;
 
     private Integer userId;

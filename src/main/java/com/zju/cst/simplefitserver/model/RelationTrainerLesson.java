@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.model;
 
-public class RelationTrainerLesson {
+import java.io.Serializable;
+
+public class RelationTrainerLesson implements Serializable {
     private Integer id;
 
     private String name;

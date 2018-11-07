@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.model;
 
-public class InfoWallet {
+import java.io.Serializable;
+
+public class InfoWallet implements Serializable {
     private Integer id;
 
     private Integer userId;

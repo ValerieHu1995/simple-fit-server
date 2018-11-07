@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.model;
 
-public class InfoShop {
+import java.io.Serializable;
+
+public class InfoShop implements Serializable {
     private Integer id;
 
     private Integer ownerId;

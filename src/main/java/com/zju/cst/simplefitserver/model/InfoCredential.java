@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.model;
 
-public class InfoCredential {
+import java.io.Serializable;
+
+public class InfoCredential implements Serializable {
     private Integer id;
 
     private String name;

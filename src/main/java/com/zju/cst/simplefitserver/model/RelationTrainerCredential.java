@@ -1,11 +1,13 @@
 package com.zju.cst.simplefitserver.model;
 
-public class RelationTrainerCredential {
+import java.io.Serializable;
+
+public class RelationTrainerCredential implements Serializable {
     private Integer id;
 
     private Integer trainerId;
 
-    private Integer credentailId;
+    private Integer credentialId;
 
     private Integer status;
 
@@ -35,12 +37,12 @@ public class RelationTrainerCredential {
         this.trainerId = trainerId;
     }
 
-    public Integer getCredentailId() {
-        return credentailId;
+    public Integer getCredentialId() {
+        return credentialId;
     }
 
-    public void setCredentailId(Integer credentailId) {
-        this.credentailId = credentailId;
+    public void setCredentialId(Integer credentialId) {
+        this.credentialId = credentialId;
     }
 
     public Integer getStatus() {

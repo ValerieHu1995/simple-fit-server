@@ -2,7 +2,6 @@ package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.RelationBuyerLesson;
 
-
 public interface RelationBuyerLessonMapper {
     int deleteByPrimaryKey(Integer id);
 

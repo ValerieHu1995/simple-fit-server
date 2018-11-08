@@ -2,7 +2,6 @@ package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.InfoShop;
 
-
 public interface InfoShopMapper {
     int deleteByPrimaryKey(Integer id);
 

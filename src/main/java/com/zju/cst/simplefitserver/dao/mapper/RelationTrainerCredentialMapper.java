@@ -2,7 +2,6 @@ package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.RelationTrainerCredential;
 
-
 public interface RelationTrainerCredentialMapper {
     int deleteByPrimaryKey(Integer id);
 

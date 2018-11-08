@@ -7,7 +7,7 @@ public class RelationTrainerLesson implements Serializable {
 
     private String name;
 
-    private Integer trainerCredentialId;
+    private Integer trainerId;
 
     private Integer lessonId;
 
@@ -24,6 +24,8 @@ public class RelationTrainerLesson implements Serializable {
     private Integer confirmTrainer;
 
     private Integer confirmSeller;
+
+    private Integer type;
 
     private String createTime;
 
@@ -47,12 +49,12 @@ public class RelationTrainerLesson implements Serializable {
         this.name = name == null ? null : name.trim();
     }
 
-    public Integer getTrainerCredentialId() {
-        return trainerCredentialId;
+    public Integer getTrainerId() {
+        return trainerId;
     }
 
-    public void setTrainerCredentialId(Integer trainerCredentialId) {
-        this.trainerCredentialId = trainerCredentialId;
+    public void setTrainerId(Integer trainerId) {
+        this.trainerId = trainerId;
     }
 
     public Integer getLessonId() {
@@ -117,6 +119,14 @@ public class RelationTrainerLesson implements Serializable {
 
     public void setConfirmSeller(Integer confirmSeller) {
         this.confirmSeller = confirmSeller;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 
     public String getCreateTime() {

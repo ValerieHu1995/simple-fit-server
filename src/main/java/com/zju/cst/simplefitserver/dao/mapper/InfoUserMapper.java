@@ -15,5 +15,6 @@ public interface InfoUserMapper {
 
     int updateByPrimaryKey(InfoUser record);
 
+    // add
     InfoUser selectByUsername(String username);
 }

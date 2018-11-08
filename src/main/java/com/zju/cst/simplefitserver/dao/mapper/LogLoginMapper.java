@@ -2,7 +2,6 @@ package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.LogLogin;
 
-
 public interface LogLoginMapper {
     int deleteByPrimaryKey(Integer id);
 

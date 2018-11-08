@@ -6,12 +6,14 @@
     <result column="owner_id" property="ownerId" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="VARCHAR" />
     <result column="update_time" property="updateTime" jdbcType="VARCHAR" />
+    <result column="capacity" property="capacity" jdbcType="INTEGER" />
     <result column="validation" property="validation" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, owner_id, name, address, create_time, update_time, validation
+    id, owner_id, name, address, time, create_time, update_time, capacity, validation
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -25,11 +27,13 @@
   </delete>
   <insert id="insert" parameterType="com.zju.cst.simplefitserver.model.InfoShop" >
     insert into info_shop (id, owner_id, name, 
-      address, create_time, update_time, 
-      validation)
+      address, time, create_time, 
+      update_time, capacity, validation
+      )
     values (#{id,jdbcType=INTEGER}, #{ownerId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
-      #{address,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}, #{updateTime,jdbcType=VARCHAR}, 
-      #{validation,jdbcType=INTEGER})
+      #{address,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=VARCHAR}, #{capacity,jdbcType=INTEGER}, #{validation,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.zju.cst.simplefitserver.model.InfoShop" >
     insert into info_shop
@@ -46,11 +50,17 @@
       <if test="address != null" >
         address,
       </if>
+      <if test="time != null" >
+        time,
+      </if>
       <if test="createTime != null" >
         create_time,
       </if>
       <if test="updateTime != null" >
         update_time,
+      </if>
+      <if test="capacity != null" >
+        capacity,
       </if>
       <if test="validation != null" >
         validation,
@@ -69,11 +79,17 @@
       <if test="address != null" >
         #{address,jdbcType=VARCHAR},
       </if>
+      <if test="time != null" >
+        #{time,jdbcType=VARCHAR},
+      </if>
       <if test="createTime != null" >
         #{createTime,jdbcType=VARCHAR},
       </if>
       <if test="updateTime != null" >
         #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="capacity != null" >
+        #{capacity,jdbcType=INTEGER},
       </if>
       <if test="validation != null" >
         #{validation,jdbcType=INTEGER},
@@ -92,11 +108,17 @@
       <if test="address != null" >
         address = #{address,jdbcType=VARCHAR},
       </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=VARCHAR},
+      </if>
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=VARCHAR},
       </if>
       <if test="updateTime != null" >
         update_time = #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="capacity != null" >
+        capacity = #{capacity,jdbcType=INTEGER},
       </if>
       <if test="validation != null" >
         validation = #{validation,jdbcType=INTEGER},
@@ -109,8 +131,10 @@
     set owner_id = #{ownerId,jdbcType=INTEGER},
       name = #{name,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
+      time = #{time,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=VARCHAR},
       update_time = #{updateTime,jdbcType=VARCHAR},
+      capacity = #{capacity,jdbcType=INTEGER},
       validation = #{validation,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>

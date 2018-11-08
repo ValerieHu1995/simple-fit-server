@@ -11,9 +11,13 @@ public class InfoShop implements Serializable {
 
     private String address;
 
+    private String time;
+
     private String createTime;
 
     private String updateTime;
+
+    private Integer capacity;
 
     private Integer validation;
 
@@ -49,6 +53,14 @@ public class InfoShop implements Serializable {
         this.address = address == null ? null : address.trim();
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time == null ? null : time.trim();
+    }
+
     public String getCreateTime() {
         return createTime;
     }
@@ -63,6 +75,14 @@ public class InfoShop implements Serializable {
 
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime == null ? null : updateTime.trim();
+    }
+
+    public Integer getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
     }
 
     public Integer getValidation() {

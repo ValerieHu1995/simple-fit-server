@@ -152,4 +152,26 @@ public class RelationTrainerLesson implements Serializable {
     public void setValidation(Integer validation) {
         this.validation = validation;
     }
+    // 测试用
+
+    @Override
+    public String toString() {
+        return "RelationTrainerLesson{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", trainerId=" + trainerId +
+            ", lessonId=" + lessonId +
+            ", shopId=" + shopId +
+            ", capacity=" + capacity +
+            ", frequency=" + frequency +
+            ", time='" + time + '\'' +
+            ", status=" + status +
+            ", confirmTrainer=" + confirmTrainer +
+            ", confirmSeller=" + confirmSeller +
+            ", type=" + type +
+            ", createTime='" + createTime + '\'' +
+            ", updateTime='" + updateTime + '\'' +
+            ", validation=" + validation +
+            '}';
+    }
 }

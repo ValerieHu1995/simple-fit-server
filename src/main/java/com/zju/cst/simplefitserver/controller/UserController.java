@@ -25,27 +25,29 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/unlogin")
-    public Object unloginError(){
+    public Object unloginError() {
         throw new UnAuthenticationException();
     }
 
     @RequestMapping("/{username}/login")
-    public Object userLogin(@PathVariable(value = "username")String name, @RequestParam(value = "password")String password){
+    public Object userLogin(@PathVariable(value = "username")String name, @RequestParam(value = "password")String password) {
 
         ResponseInfo responseInfo = new ResponseInfo();
         Subject subject = SecurityUtils.getSubject();
+
+        System.out.println(password);
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(name,password);
-        try{
+        try {
 
             subject.login(usernamePasswordToken);
 
-        }catch (UnknownAccountException ue){
+        } catch (UnknownAccountException ue){
 
             responseInfo.setResCode("000001");
             responseInfo.setResInfo(" Unknow Username ");
             return responseInfo;
 
-        }catch (IncorrectCredentialsException ie){
+        } catch (IncorrectCredentialsException ie){
 
             log.info("User login fail : username = {} , password = {} ",name,password);
             responseInfo.setResCode("000002");
@@ -63,7 +65,7 @@ public class UserController {
     }
 
     @RequestMapping("/{username}/info")
-    public Object getUserInfo(@PathVariable("username")String name){
+    public Object getUserInfo(@PathVariable("username")String name) {
 
         ResponseInfo responseInfo = new ResponseInfo();
         Subject currentUser = SecurityUtils.getSubject();

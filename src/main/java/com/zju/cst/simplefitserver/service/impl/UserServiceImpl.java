@@ -40,5 +40,4 @@ public class UserServiceImpl implements UserService {
         return this.infoUserMapper.updateByPrimaryKeySelective(record);
     }
 
-
 }

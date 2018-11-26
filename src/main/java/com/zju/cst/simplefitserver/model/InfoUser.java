@@ -1,5 +1,6 @@
 package com.zju.cst.simplefitserver.model;
 
+import javax.persistence.Column;
 import java.io.Serializable;
 
 public class InfoUser implements Serializable {

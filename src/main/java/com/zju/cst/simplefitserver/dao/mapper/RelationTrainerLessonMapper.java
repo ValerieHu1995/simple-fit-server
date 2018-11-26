@@ -5,6 +5,7 @@ import com.zju.cst.simplefitserver.model.RelationTrainerLesson;
 public interface RelationTrainerLessonMapper {
     int deleteByPrimaryKey(Integer id);
 
+    // 教练开课
     int insert(RelationTrainerLesson record);
 
     int insertSelective(RelationTrainerLesson record);

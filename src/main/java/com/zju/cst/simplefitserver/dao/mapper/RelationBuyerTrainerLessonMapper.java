@@ -1,8 +1,9 @@
 package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.RelationBuyerTrainerLesson;
+import org.apache.ibatis.annotations.Mapper;
 
-
+@Mapper
 public interface RelationBuyerTrainerLessonMapper {
     int deleteByPrimaryKey(Integer id);
 

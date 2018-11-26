@@ -25,20 +25,19 @@ public class UserServiceImpl implements UserService {
     */
 
     @Override
-    @Cacheable(cacheNames = "GetUserInfoByName" ,keyGenerator = "MethodNameAndArgsKey",unless = "#result==null")
-    public InfoUser getUserInfoByName(String name){
-        return this.infoUserMapper.selectByUsername(name);
+    @Cacheable(cacheNames = "GetUserInfoByName", keyGenerator = "MethodNameAndArgsKey", unless = "#result==null")
+    public InfoUser getUserInfoByName(String name) {
+        return infoUserMapper.selectByUsername(name);
     }
 
     @Override
     public int insertSelective(InfoUser record) {
-        return this.infoUserMapper.insertSelective(record);
+        return infoUserMapper.insertSelective(record);
     }
 
     @Override
     public int updateByPrimaryKeySelective(InfoUser record) {
-        return this.infoUserMapper.updateByPrimaryKeySelective(record);
+        return infoUserMapper.updateByPrimaryKeySelective(record);
     }
-
 
 }

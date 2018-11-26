@@ -52,4 +52,16 @@ public class InfoLesson implements Serializable {
     public void setValidation(Integer validation) {
         this.validation = validation;
     }
+
+    // test
+    @Override
+    public String toString() {
+        return "InfoLesson{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", createTime='" + createTime + '\'' +
+            ", updateTime='" + updateTime + '\'' +
+            ", validation=" + validation +
+            '}';
+    }
 }

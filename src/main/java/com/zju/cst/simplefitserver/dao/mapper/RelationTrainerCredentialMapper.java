@@ -14,4 +14,5 @@ public interface RelationTrainerCredentialMapper {
     int updateByPrimaryKeySelective(RelationTrainerCredential record);
 
     int updateByPrimaryKey(RelationTrainerCredential record);
+
 }

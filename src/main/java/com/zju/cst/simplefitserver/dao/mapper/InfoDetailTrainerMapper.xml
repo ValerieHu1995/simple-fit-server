@@ -18,6 +18,23 @@
     from info_detail_trainer
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <!--查询指定 id 的教练能开的课程-->
+  <!--通过 trainer_id 返回 list 包含 lesson -->
+  <!--需要联立 relation_trainer_credential 和 relation_lesson_credential -->
+  <select id="selectLessonByTrainerId" resultMap="com.zju.cst.simplefitserver.dao.mapper.InfoLessonMapper.BaseResultMap" parameterType="java.lang.Integer">
+    select
+    info_lesson.*
+    from
+    relation_lesson_credential lc, relation_trainer_credential tc, info_lesson
+    where
+    lc.credential_id = tc.credentail_id
+    and
+    info_lesson.id = lc.lesson_id
+    and
+    tc.trainer_id = #{trainer_id,jdbcType=INTEGER}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from info_detail_trainer
     where id = #{id,jdbcType=INTEGER}

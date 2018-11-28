@@ -3,6 +3,8 @@ package com.zju.cst.simplefitserver.dao.mapper;
 import com.zju.cst.simplefitserver.model.RelationTrainerLesson;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 public interface RelationTrainerLessonMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -17,4 +19,10 @@ public interface RelationTrainerLessonMapper {
     int updateByPrimaryKeySelective(RelationTrainerLesson record);
 
     int updateByPrimaryKey(RelationTrainerLesson record);
+
+    // 根据教练获取课程
+    List<RelationTrainerLesson> selectByTrainerId(Integer id);
+
+    // 根据地点查询课程
+    List<RelationTrainerLesson> selectByPlace(String place);
 }

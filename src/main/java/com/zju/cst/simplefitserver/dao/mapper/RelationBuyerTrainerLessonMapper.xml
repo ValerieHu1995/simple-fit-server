@@ -13,7 +13,7 @@
     <result column="validation" property="validation" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, buyer_id, trainer_lesson_id, time, confirm_trainer, confirm_buyer, create_time, 
+    id, buyer_id, trainer_lesson_id, time, confirm_trainer, confirm_buyer, create_time,
     update_time, validation
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
@@ -26,6 +26,23 @@
     delete from relation_buyer_trainer_lesson
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
+  <!--查看教练七天日程-->
+  <!--未完成-->
+  <select id="viewSchedule">
+    select btl.*
+    from relation_buyer_trainer_lesson btl, relation_trainer_lesson tl
+    where btl.trainer_lesson_id = tl.id
+    and trainer_id = #{trainerId,jdbcType=INTEGER}
+  </select>
+
+  <!--取消学生定下的课程-->
+  <delete id="deleteByTimeAndTrainerLessonId">
+    delete from relation_buyer_trainer_lesson
+    where trainer_lesson_id = #{trainerLessonId,jdbcType=INTEGER}
+    and time = #{time,jdbcType=VARCHAR}
+  </delete>
+
   <insert id="insert" parameterType="com.zju.cst.simplefitserver.model.RelationBuyerTrainerLesson" >
     insert into relation_buyer_trainer_lesson (id, buyer_id, trainer_lesson_id, 
       time, confirm_trainer, confirm_buyer, 
@@ -137,6 +154,13 @@
       create_time = #{createTime,jdbcType=VARCHAR},
       update_time = #{updateTime,jdbcType=VARCHAR},
       validation = #{validation,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--教练确认一节课结束-->
+  <update id="verifyBuyerLesson">
+    update relation_buyer_trainer_lesson
+    set confirm_trainer = 1
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

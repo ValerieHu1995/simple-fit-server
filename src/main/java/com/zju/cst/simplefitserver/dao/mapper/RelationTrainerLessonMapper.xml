@@ -28,6 +28,22 @@
     from relation_trainer_lesson
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <!--根据教练 id 获取全部课程-->
+  <select id="selectByTrainerId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select relation_trainer_lesson.*
+    from relation_trainer_lesson
+    where trainer_id = #{trainer_id,jdbcType=INTEGER}
+  </select>
+
+  <!--根据地点查询课程-->
+  <select id="selectByPlace" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select tl.*
+    from relation_trainer_lesson tl, info_shop
+    where tl.shop_id = info_shop.id
+    and info_shop.name like concat('%',#{place,jdbcType=VARCHAR},'%')
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from relation_trainer_lesson
     where id = #{id,jdbcType=INTEGER}

@@ -1,8 +1,6 @@
 package com.zju.cst.simplefitserver.service;
 
-import com.zju.cst.simplefitserver.model.InfoLesson;
-import com.zju.cst.simplefitserver.model.RelationBuyerTrainerLesson;
-import com.zju.cst.simplefitserver.model.RelationTrainerLesson;
+import com.zju.cst.simplefitserver.model.*;
 
 import java.util.List;
 
@@ -37,4 +35,12 @@ public interface TrainerService {
   // 教练查看 7 天日程
   List<RelationBuyerTrainerLesson> viewSchedule(Integer trainerId, String startTime);
 
+  //教练上传证书
+  int insertCredential(RelationTrainerCredential relationTrainerCredential);
+
+  //教练更新证书
+  int updateCredential(RelationTrainerCredential relationTrainerCredential);
+
+  //教练查看证书
+  List<InfoCredential> viewCredential(Integer trainerId);
 }

@@ -1,11 +1,7 @@
 package com.zju.cst.simplefitserver.service.impl;
 
-import com.zju.cst.simplefitserver.dao.mapper.InfoDetailTrainerMapper;
-import com.zju.cst.simplefitserver.dao.mapper.RelationBuyerTrainerLessonMapper;
-import com.zju.cst.simplefitserver.dao.mapper.RelationTrainerLessonMapper;
-import com.zju.cst.simplefitserver.model.InfoLesson;
-import com.zju.cst.simplefitserver.model.RelationBuyerTrainerLesson;
-import com.zju.cst.simplefitserver.model.RelationTrainerLesson;
+import com.zju.cst.simplefitserver.dao.mapper.*;
+import com.zju.cst.simplefitserver.model.*;
 import com.zju.cst.simplefitserver.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +13,9 @@ public class TrainerServiceImpl implements TrainerService {
 
   @Autowired
   private RelationTrainerLessonMapper relationTrainerLessonMapper;
+
+  @Autowired
+  private RelationTrainerCredentialMapper relationTrainerCredentialMapper;
 
   /**
    * @param record
@@ -108,4 +107,30 @@ public class TrainerServiceImpl implements TrainerService {
     return list;
   }
 
+  /**
+   *
+   * @param relationTrainerCredential
+   * @return 教练上传证书
+   */
+  @Override
+  public int insertCredential(RelationTrainerCredential relationTrainerCredential) {
+    return relationTrainerCredentialMapper.insert(relationTrainerCredential)
+  }
+
+  /**
+   *
+   * @param relationTrainerCredential
+   * @return 教练更新证书
+   */
+  @Override
+  public int updateCredential(RelationTrainerCredential relationTrainerCredential) {
+    return relationTrainerCredentialMapper.updateByPrimaryKeySelective(relationTrainerCredential);
+  }
+
+  @Override
+  public List<InfoCredential> viewCredential(Integer trainerId) {
+    List<InfoCredential> list = infoDetailTrainerMapper.selectCredentialByTrainerId(trainerId);
+    return list;
+  }
 }
+

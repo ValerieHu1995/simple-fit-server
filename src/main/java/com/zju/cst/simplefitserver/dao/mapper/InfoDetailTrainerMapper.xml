@@ -35,6 +35,17 @@
     tc.trainer_id = #{trainer_id,jdbcType=INTEGER}
   </select>
 
+  <select id="selectCredentialByTrainerId" resultMap="com.zju.cst.simplefitserver.dao.mapper.InfoCredentialMapper.BaseResultMap" parameterType="java.lang.Integer">
+    select
+    info_credential.*
+    from
+    relation_trainer_credential rtc, info_credential ic
+    where
+    rtc.credentail_id = ic.id
+    and
+    rtc.trainer_id = #{trainer_id, jdbcType=INTEGER}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from info_detail_trainer
     where id = #{id,jdbcType=INTEGER}

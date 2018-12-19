@@ -221,6 +221,7 @@ public class TrainerController {
     return responseInfo;
   }
 
+  //删除证书
   @ResponseBody
   @RequestMapping(value = "/deleteCredential", method = RequestMethod.DELETE)
   public Object deleteCredential(@RequestParam(value = "trainerId") Integer trainerId, @RequestParam(value = "credentialId") Integer credentialId){

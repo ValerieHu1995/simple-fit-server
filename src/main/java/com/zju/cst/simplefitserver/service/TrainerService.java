@@ -44,5 +44,6 @@ public interface TrainerService {
   //教练查看证书
   List<InfoCredential> viewCredential(Integer trainerId);
 
+  //教练删除证书
   int trainerDeleteCredential(Integer trainerId, Integer credentialId);
 }

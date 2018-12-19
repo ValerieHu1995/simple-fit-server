@@ -174,8 +174,8 @@ public class TrainerController {
 
   //上传课程证书
   @ResponseBody
-  @RequestMapping(value = "/trainerUploadCredential", method = RequestMethod.POST)
-  public Object trainerUploadCredential(@RequestBody RelationTrainerCredential relationTrainerCredential){
+  @RequestMapping(value = "/uploadCredential", method = RequestMethod.POST)
+  public Object uploadCredential(@RequestBody RelationTrainerCredential relationTrainerCredential){
     ResponseInfo responseInfo = new ResponseInfo();
     if(relationTrainerCredential!=null){
       trainerService.insertCredential(relationTrainerCredential);
@@ -190,10 +190,10 @@ public class TrainerController {
 
   //更新证书
   @ResponseBody
-  @RequestMapping(value = "/trainerUpdateCredential", method = RequestMethod.PUT)
-  public Object trainerUpdateCredential(@RequestBody RelationTrainerCredential relationTrainerCredential){
+  @RequestMapping(value = "/updateCredential", method = RequestMethod.PUT)
+  public Object updateCredential(@RequestBody RelationTrainerCredential relationTrainerCredential){
     ResponseInfo responseInfo = new ResponseInfo();
-    if(relationTrainerCredential!=null){
+    if(relationTrainerCredential.getId()!=null){
       trainerService.updateCredential(relationTrainerCredential);
       responseInfo.setResCode("200");
       responseInfo.setResInfo("Success");
@@ -206,8 +206,8 @@ public class TrainerController {
 
   //查看证书
   @ResponseBody
-  @RequestMapping(value = "/trainerViewAllCredential",method = RequestMethod.GET)
-  public Object trainerViewAllCredential(@RequestParam(value = "trainerId") Integer trainerId){
+  @RequestMapping(value = "/viewAllCredential",method = RequestMethod.GET)
+  public Object viewAllCredential(@RequestParam(value = "trainerId") Integer trainerId){
     ResponseInfo responseInfo = new ResponseInfo();
     if (trainerId != null) {
       List list = trainerService.viewCredential(trainerId);
@@ -220,4 +220,20 @@ public class TrainerController {
     responseInfo.setResInfo("Error");
     return responseInfo;
   }
+
+  @ResponseBody
+  @RequestMapping(value = "/deleteCredential", method = RequestMethod.DELETE)
+  public Object deleteCredential(@RequestParam(value = "trainerId") Integer trainerId, @RequestParam(value = "credentialId") Integer credentialId){
+    ResponseInfo responseInfo = new ResponseInfo();
+    if (trainerId != null && credentialId!=null) {
+     trainerService.trainerDeleteCredential(trainerId,credentialId);
+      responseInfo.setResCode("200");
+      responseInfo.setResInfo("Success");
+      return responseInfo;
+    }
+    responseInfo.setResCode("default");
+    responseInfo.setResInfo("Error");
+    return responseInfo;
+  }
+
 }

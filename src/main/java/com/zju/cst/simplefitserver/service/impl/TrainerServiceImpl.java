@@ -114,7 +114,7 @@ public class TrainerServiceImpl implements TrainerService {
    */
   @Override
   public int insertCredential(RelationTrainerCredential relationTrainerCredential) {
-    return relationTrainerCredentialMapper.insert(relationTrainerCredential)
+    return relationTrainerCredentialMapper.insert(relationTrainerCredential);
   }
 
   /**
@@ -127,10 +127,26 @@ public class TrainerServiceImpl implements TrainerService {
     return relationTrainerCredentialMapper.updateByPrimaryKeySelective(relationTrainerCredential);
   }
 
+  /**
+   *
+   * @param trainerId
+   * @return 教练查看所拥有证书
+   */
   @Override
   public List<InfoCredential> viewCredential(Integer trainerId) {
     List<InfoCredential> list = infoDetailTrainerMapper.selectCredentialByTrainerId(trainerId);
     return list;
+  }
+
+  /**
+   *
+   * @param trainerId
+   * @param credentialId
+   * @return 教练根据证书ID和教练ID删除证书
+   */
+  @Override
+  public int trainerDeleteCredential(Integer trainerId, Integer credentialId) {
+    return relationTrainerCredentialMapper.deleteByTrainerIdAndCredentialId(trainerId,credentialId);
   }
 }
 

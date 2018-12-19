@@ -37,13 +37,13 @@
 
   <select id="selectCredentialByTrainerId" resultMap="com.zju.cst.simplefitserver.dao.mapper.InfoCredentialMapper.BaseResultMap" parameterType="java.lang.Integer">
     select
-    info_credential.*
+    ic.*
     from
     relation_trainer_credential rtc, info_credential ic
     where
     rtc.credentail_id = ic.id
     and
-    rtc.trainer_id = #{trainer_id, jdbcType=INTEGER}
+    rtc.trainer_id = #{id, jdbcType=INTEGER}
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >

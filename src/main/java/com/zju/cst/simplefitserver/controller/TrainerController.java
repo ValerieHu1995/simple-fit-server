@@ -1,6 +1,8 @@
 package com.zju.cst.simplefitserver.controller;
 
 import com.zju.cst.simplefitserver.common.ResponseInfo;
+import com.zju.cst.simplefitserver.model.InfoCredential;
+import com.zju.cst.simplefitserver.model.RelationTrainerCredential;
 import com.zju.cst.simplefitserver.model.RelationTrainerLesson;
 import com.zju.cst.simplefitserver.service.TrainerService;
 import lombok.extern.slf4j.Slf4j;
@@ -163,6 +165,71 @@ public class TrainerController {
       responseInfo.setResCode("200");
       responseInfo.setResInfo("Success");
       responseInfo.setResDataSet(list.toArray());
+      return responseInfo;
+    }
+    responseInfo.setResCode("default");
+    responseInfo.setResInfo("Error");
+    return responseInfo;
+  }
+
+  //上传课程证书
+  @ResponseBody
+  @RequestMapping(value = "/uploadCredential", method = RequestMethod.POST)
+  public Object uploadCredential(@RequestBody RelationTrainerCredential relationTrainerCredential){
+    ResponseInfo responseInfo = new ResponseInfo();
+    if(relationTrainerCredential!=null){
+      trainerService.insertCredential(relationTrainerCredential);
+      responseInfo.setResCode("200");
+      responseInfo.setResInfo("Success");
+      return responseInfo;
+    }
+    responseInfo.setResCode("default");
+    responseInfo.setResInfo("Error");
+    return responseInfo;
+  }
+
+  //更新证书
+  @ResponseBody
+  @RequestMapping(value = "/updateCredential", method = RequestMethod.PUT)
+  public Object updateCredential(@RequestBody RelationTrainerCredential relationTrainerCredential){
+    ResponseInfo responseInfo = new ResponseInfo();
+    if(relationTrainerCredential.getId()!=null){
+      trainerService.updateCredential(relationTrainerCredential);
+      responseInfo.setResCode("200");
+      responseInfo.setResInfo("Success");
+      return responseInfo;
+    }
+    responseInfo.setResCode("default");
+    responseInfo.setResInfo("Error");
+    return responseInfo;
+  }
+
+  //查看证书
+  @ResponseBody
+  @RequestMapping(value = "/viewAllCredential",method = RequestMethod.GET)
+  public Object viewAllCredential(@RequestParam(value = "trainerId") Integer trainerId){
+    ResponseInfo responseInfo = new ResponseInfo();
+    if (trainerId != null) {
+      List list = trainerService.viewCredential(trainerId);
+      responseInfo.setResCode("200");
+      responseInfo.setResInfo("Success");
+      responseInfo.setResDataSet(list.toArray());
+      return responseInfo;
+    }
+    responseInfo.setResCode("default");
+    responseInfo.setResInfo("Error");
+    return responseInfo;
+  }
+
+  //删除证书
+  @ResponseBody
+  @RequestMapping(value = "/deleteCredential", method = RequestMethod.DELETE)
+  public Object deleteCredential(@RequestParam(value = "trainerId") Integer trainerId, @RequestParam(value = "credentialId") Integer credentialId){
+    ResponseInfo responseInfo = new ResponseInfo();
+    if (trainerId != null && credentialId!=null) {
+     trainerService.trainerDeleteCredential(trainerId,credentialId);
+      responseInfo.setResCode("200");
+      responseInfo.setResInfo("Success");
       return responseInfo;
     }
     responseInfo.setResCode("default");

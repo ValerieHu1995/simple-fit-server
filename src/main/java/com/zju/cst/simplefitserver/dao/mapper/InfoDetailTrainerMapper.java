@@ -1,5 +1,6 @@
 package com.zju.cst.simplefitserver.dao.mapper;
 
+import com.zju.cst.simplefitserver.model.InfoCredential;
 import com.zju.cst.simplefitserver.model.InfoDetailTrainer;
 import com.zju.cst.simplefitserver.model.InfoLesson;
 
@@ -20,4 +21,7 @@ public interface InfoDetailTrainerMapper {
 
     // 查询指定 trainer_id 的全部课程
     List<InfoLesson> selectLessonByTrainerId(Integer id);
+
+    //查询制定教练的证书
+    List<InfoCredential> selectCredentialByTrainerId(Integer id);
 }

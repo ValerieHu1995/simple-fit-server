@@ -103,4 +103,47 @@
       validation = #{validation,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <resultMap id="ShopAndSellerMap" type="com.zju.cst.simplefitserver.model.vo.ShopAndSeller" >
+    <result column="owner_id" property="ownerId" jdbcType="INTEGER" />
+    <result column="realname" property="realname" jdbcType="VARCHAR" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="capacity" property="capacity" jdbcType="INTEGER" />
+  </resultMap>
+
+  <!--获取全部商家-->
+  <!--搜索出来的是 shop 和 seller 的联立-->
+  <select id="getAllCompanies" resultMap="ShopAndSellerMap">
+    select *
+    from info_shop, info_detail_seller ds
+    where info_shop.owner_id = ds.id
+  </select>
+
+  <!--获取我的商家-->
+  <select id="getMyCompanies" resultMap="ShopAndSellerMap">
+    select owner_id, realname, shop_id, info_shop.`name`, address, info_shop.capacity
+    from relation_buyer_lesson bl, relation_trainer_lesson tl, info_shop, info_detail_seller ds
+    where bl.trainer_lesson_id = tl.id
+    and tl.shop_id = info_shop.id
+    and bl.buyer_id = #{buyer_id,jdbcType=INTEGER}
+    and ds.id = info_shop.owner_id
+  </select>
+
+  <!--获取一个商家-->
+  <select id="getSeller" resultMap="BaseResultMap">
+    select *
+    from info_detail_seller
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+
+  <!--获取商家登录信息-->
+  <select id="getInfo" resultType="com.zju.cst.simplefitserver.model.vo.User">
+    select info_user.*, info_detail_seller.id typeId
+    from info_user, info_detail_seller
+    where username = #{username,jdbcType=VARCHAR}
+    and info_user.id = info_detail_seller.user_id
+  </select>
+
 </mapper>

@@ -2,20 +2,24 @@ package com.zju.cst.simplefitserver.service.impl;
 
 import com.zju.cst.simplefitserver.dao.mapper.*;
 import com.zju.cst.simplefitserver.model.*;
+import com.zju.cst.simplefitserver.model.vo.Curriculum;
+import com.zju.cst.simplefitserver.model.vo.User;
 import com.zju.cst.simplefitserver.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Service
 public class TrainerServiceImpl implements TrainerService {
 
   @Autowired
-  private RelationTrainerLessonMapper relationTrainerLessonMapper;
+  RelationTrainerLessonMapper relationTrainerLessonMapper;
 
   @Autowired
-  private RelationTrainerCredentialMapper relationTrainerCredentialMapper;
+  RelationTrainerCredentialMapper relationTrainerCredentialMapper;
 
   /**
    * @param record
@@ -27,7 +31,7 @@ public class TrainerServiceImpl implements TrainerService {
   }
 
   @Autowired
-  private InfoDetailTrainerMapper infoDetailTrainerMapper;
+  InfoDetailTrainerMapper infoDetailTrainerMapper;
 
   /**
    * @param trainerId
@@ -99,16 +103,25 @@ public class TrainerServiceImpl implements TrainerService {
   /**
    * @param trainerId
    * @param startTime
-   * @return 教练查看 7 天日程
+   * @return 教练查看 3 天日程
    */
   @Override
-  public List<RelationBuyerTrainerLesson> viewSchedule(Integer trainerId, String startTime) {
-    List<RelationBuyerTrainerLesson> list = relationBuyerTrainerLessonMapper.viewSchedule(trainerId, startTime);
+  public List<Curriculum> viewSchedule(Integer trainerId, String startTime) {
+    // 从当前时间找到后 n 天时间
+    SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
+    String endTime = startTime;
+    try {
+      endTime = df.format(df.parse(startTime).getTime() + 3 * 24 * 60 * 60 * 1000L);
+    } catch (ParseException e) {
+      e.printStackTrace();
+    }
+    List<Curriculum> list = relationBuyerTrainerLessonMapper.viewSchedule(trainerId,
+        startTime + "000",
+        endTime + " 111");
     return list;
   }
 
   /**
-   *
    * @param relationTrainerCredential
    * @return 教练上传证书
    */
@@ -118,7 +131,6 @@ public class TrainerServiceImpl implements TrainerService {
   }
 
   /**
-   *
    * @param relationTrainerCredential
    * @return 教练更新证书
    */
@@ -128,7 +140,6 @@ public class TrainerServiceImpl implements TrainerService {
   }
 
   /**
-   *
    * @param trainerId
    * @return 教练查看所拥有证书
    */
@@ -139,14 +150,34 @@ public class TrainerServiceImpl implements TrainerService {
   }
 
   /**
-   *
    * @param trainerId
    * @param credentialId
    * @return 教练根据证书ID和教练ID删除证书
    */
   @Override
   public int trainerDeleteCredential(Integer trainerId, Integer credentialId) {
-    return relationTrainerCredentialMapper.deleteByTrainerIdAndCredentialId(trainerId,credentialId);
+    return relationTrainerCredentialMapper.deleteByTrainerIdAndCredentialId(trainerId, credentialId);
+  }
+
+  // 获取 trainer
+  @Override
+  public InfoDetailTrainer getTrainer(Integer userId) {
+    return infoDetailTrainerMapper.getTrainer(userId);
+  }
+
+  @Autowired
+  RelationUserWalletMapper relationUserWalletMapper;
+
+  // 获取今日买卡的数量
+  @Override
+  public List<Integer> getCardNumToday(Integer userId, Integer createTime) {
+    return relationUserWalletMapper.trainerGetCardNumToday(userId, createTime);
+  }
+
+  // 获取商家登录的信息
+  @Override
+  public User getInfo(String username) {
+    return infoDetailTrainerMapper.getInfo(username);
   }
 }
 

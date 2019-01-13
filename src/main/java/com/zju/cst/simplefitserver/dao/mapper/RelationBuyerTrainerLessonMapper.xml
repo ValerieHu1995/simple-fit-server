@@ -12,6 +12,25 @@
     <result column="update_time" property="updateTime" jdbcType="VARCHAR" />
     <result column="validation" property="validation" jdbcType="INTEGER" />
   </resultMap>
+
+  <!--vo 层-->
+  <resultMap id="CurriculumMap" type="com.zju.cst.simplefitserver.model.vo.Curriculum">
+    <result column="buyer_id" property="buyerId" jdbcType="INTEGER" />
+    <result column="trainer_lesson_id" property="trainerLessonId" jdbcType="INTEGER" />
+    <result column="lesson_id" property="lessonId" jdbcType="INTEGER" />
+    <result column="trainer_id" property="trainerId" jdbcType="INTEGER" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="time" property="time" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="confirm_trainer" property="confirmTrainer" jdbcType="INTEGER" />
+    <result column="confirm_buyer" property="confirmBuyer" jdbcType="INTEGER" />
+    <result column="capacity" property="capacity" jdbcType="INTEGER" />
+    <result column="frequency" property="frequency" jdbcType="INTEGER" />
+    <result column="realname" property="trainerName" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
     id, buyer_id, trainer_lesson_id, time, confirm_trainer, confirm_buyer, create_time,
     update_time, validation
@@ -27,13 +46,40 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <!--查看教练七天日程-->
-  <!--未完成-->
-  <select id="viewSchedule">
-    select btl.*
-    from relation_buyer_trainer_lesson btl, relation_trainer_lesson tl
+  <!--查看教练3天日程-->
+  <select id="viewSchedule" resultMap="CurriculumMap">
+    select buyer_id, trainer_lesson_id, lesson_id, trainer_id, shop_id, type, btl.time, tl.name, btl.confirm_trainer, btl.confirm_buyer, tl.capacity, frequency, dt.realname, info_shop.address
+    from relation_buyer_trainer_lesson btl, relation_trainer_lesson tl, info_detail_trainer dt, info_shop
     where btl.trainer_lesson_id = tl.id
     and trainer_id = #{trainerId,jdbcType=INTEGER}
+    and btl.time between #{startTime,jdbcType=VARCHAR} and #{endTime,jdbcType=VARCHAR}
+    and dt.id = trainer_id
+    and info_shop.id = shop_id
+    order by btl.time
+  </select>
+
+  <!--学生查看3天课表-->
+  <select id="viewScheduleByBuyer" resultMap="CurriculumMap">
+    select buyer_id, trainer_lesson_id, lesson_id, trainer_id, shop_id, type, btl.time, tl.name, btl.confirm_trainer, btl.confirm_buyer, tl.capacity, frequency, dt.realname, info_shop.address
+    from relation_buyer_trainer_lesson btl, relation_trainer_lesson tl, info_detail_trainer dt, info_shop
+    where buyer_id = #{buyerId,jdbcType=INTEGER}
+    and btl.time between #{startTime,jdbcType=VARCHAR} and #{endTime,jdbcType=VARCHAR}
+    and btl.trainer_lesson_id = tl.id
+    and dt.id = trainer_id
+    and info_shop.id = shop_id
+    order by btl.time
+  </select>
+
+  <!--商家查看3天课程-->
+  <select id="viewScheduleBySeller" resultMap="CurriculumMap">
+    select buyer_id, trainer_lesson_id, lesson_id, trainer_id, shop_id, type, btl.time, tl.name, btl.confirm_trainer, btl.confirm_buyer, tl.capacity, frequency, dt.realname, info_shop.address
+    from relation_buyer_trainer_lesson btl, relation_trainer_lesson tl, info_detail_trainer dt, info_shop
+    where btl.trainer_lesson_id = tl.id
+    and btl.time between #{startTime,jdbcType=VARCHAR} and #{endTime,jdbcType=VARCHAR}
+    and dt.id = trainer_id
+    and info_shop.id = shop_id
+    and info_shop.owner_id = #{sellerId,jdbcType=INTEGER}
+    order by btl.time
   </select>
 
   <!--取消学生定下的课程-->

@@ -1,6 +1,9 @@
 package com.zju.cst.simplefitserver.service;
 
 import com.zju.cst.simplefitserver.model.*;
+import com.zju.cst.simplefitserver.model.vo.Curriculum;
+import com.zju.cst.simplefitserver.model.vo.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -32,8 +35,8 @@ public interface TrainerService {
   // 教练确认课程完成
   int verifyBuyerLesson(Integer id);
 
-  // 教练查看 7 天日程
-  List<RelationBuyerTrainerLesson> viewSchedule(Integer trainerId, String startTime);
+  // 教练查看 3 天日程
+  List<Curriculum> viewSchedule(Integer trainerId, String startTime);
 
   //教练上传证书
   int insertCredential(RelationTrainerCredential relationTrainerCredential);
@@ -46,4 +49,13 @@ public interface TrainerService {
 
   //教练删除证书
   int trainerDeleteCredential(Integer trainerId, Integer credentialId);
+
+  // 获取教练
+  InfoDetailTrainer getTrainer(Integer userId);
+
+  // 返回今日买卡数
+  List<Integer> getCardNumToday(Integer userId, Integer createTime);
+
+  // 获取商家登录的信息
+  User getInfo(String username);
 }

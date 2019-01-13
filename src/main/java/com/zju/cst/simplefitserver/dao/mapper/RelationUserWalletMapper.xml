@@ -9,13 +9,14 @@
     <result column="create_time" property="createTime" jdbcType="INTEGER" />
     <result column="update_time" property="updateTime" jdbcType="INTEGER" />
     <result column="validation" property="validation" jdbcType="INTEGER" />
+    <result column="spending" property="spending" jdbcType="INTEGER" />
+    <result column="trainerLessonId" property="trainerLessonId" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, buyer_id, wallet_id, money, create_time, update_time, validation
+    id, buyer_id, wallet_id, money, create_time, update_time, validation, spending, trainer_lesson_id
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
+    select *
     from relation_user_wallet
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -24,12 +25,12 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.zju.cst.simplefitserver.model.RelationUserWallet" >
-    insert into relation_user_wallet (id, buyer_id, wallet_id, 
-      money, create_time, update_time, 
-      validation)
+    insert into relation_user_wallet (id, buyer_id, wallet_id,
+      money, create_time, update_time,
+      validation, trainer_lesson_id)
     values (#{id,jdbcType=INTEGER}, #{buyerId,jdbcType=INTEGER}, #{walletId,jdbcType=INTEGER}, 
       #{money,jdbcType=INTEGER}, #{createTime,jdbcType=INTEGER}, #{updateTime,jdbcType=INTEGER}, 
-      #{validation,jdbcType=INTEGER})
+      #{validation,jdbcType=INTEGER}), #{spending,jdbcType=INTEGER}), #{trainerLessonId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.zju.cst.simplefitserver.model.RelationUserWallet" >
     insert into relation_user_wallet
@@ -55,6 +56,12 @@
       <if test="validation != null" >
         validation,
       </if>
+      <if test="spending != null" >
+        spending,
+      </if>
+      <if test="trainerLessonId != null" >
+        trainer_lesson_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -77,6 +84,12 @@
       </if>
       <if test="validation != null" >
         #{validation,jdbcType=INTEGER},
+      </if>
+      <if test="spending != null" >
+        #{spending,jdbcType=INTEGER},
+      </if>
+      <if test="trainerLessonId != null" >
+        #{trainerLessonId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -101,6 +114,12 @@
       <if test="validation != null" >
         validation = #{validation,jdbcType=INTEGER},
       </if>
+      <if test="spending != null" >
+        spending = #{spending,jdbcType=INTEGER},
+      </if>
+      <if test="trainerLessonId != null" >
+        trainer_lesson_id = #{trainerLessonId,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -111,7 +130,59 @@
       money = #{money,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=INTEGER},
       update_time = #{updateTime,jdbcType=INTEGER},
-      validation = #{validation,jdbcType=INTEGER}
+      validation = #{validation,jdbcType=INTEGER},
+      spending = #{spending,jdbcType=INTEGER},
+      trainer_lesson_id = #{trainerLessonId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!--商家获取今日买卡数-->
+  <select id="getCardNumToday" resultType="java.lang.Integer">
+    select count(*)
+    from relation_user_wallet uw
+    where spending = 0
+    and wallet_id = #{walletId, jdbcType=INTEGER}
+    and create_time = #{createTime,jdbcType=INTEGER}
+    union all
+    select count(*)
+    from relation_user_wallet uw, relation_trainer_lesson tl, info_shop, info_detail_seller ds
+    where spending = 1
+    and uw.create_time = #{createTime,jdbcType=INTEGER}
+    and uw.trainer_lesson_id = tl.id
+    and tl.shop_id = info_shop.id
+    and info_shop.owner_id = ds.id
+    and ds.user_id = #{walletId, jdbcType=INTEGER}
+  </select>
+
+  <!--商家获取今日买课数-->
+  <select id="getLessonNumToday" resultType="java.lang.Integer">
+    select count(*)
+    from relation_user_wallet uw, relation_trainer_lesson tl, info_shop, info_detail_seller ds
+    where spending = 1
+    and uw.create_time = #{createTime,jdbcType=INTEGER}
+    and uw.trainer_lesson_id = tl.id
+    and tl.shop_id = info_shop.id
+    and info_shop.owner_id = ds.id
+    and ds.user_id = #{walletId, jdbcType=INTEGER}
+  </select>
+
+  <!--教练获取今日买卡数和买课数-->
+  <select id="trainerGetCardNumToday" resultType="java.lang.Integer">
+    select count(*)
+    from relation_user_wallet uw, relation_trainer_lesson tl, info_shop, info_detail_trainer dt
+    where spending = 0
+    and tl.shop_id = info_shop.id
+    and info_shop.owner_id = uw.wallet_id
+    and tl.trainer_id = dt.id
+    and uw.create_time = #{createTime,jdbcType=INTEGER}
+    and dt.user_id = #{userId,jdbcType=INTEGER}
+    union all
+    select count(*)
+    from relation_user_wallet uw, relation_trainer_lesson tl, info_detail_trainer dt
+    where spending = 1
+    and uw.trainer_lesson_id = tl.id
+    and tl.trainer_id = dt.id
+    and dt.user_id = #{userId,jdbcType=INTEGER}
+    and uw.create_time = #{createTime,jdbcType=INTEGER}
+  </select>
 </mapper>

@@ -35,6 +35,27 @@
     tc.trainer_id = #{trainer_id,jdbcType=INTEGER}
   </select>
 
+  <!--查询全部的教练-->
+  <select id="getAllTrainers" resultMap="BaseResultMap">
+    select * from info_detail_trainer
+  </select>
+
+  <!--查询我的教练-->
+  <select id="getMyTrainers" resultMap="BaseResultMap">
+    select dt.*
+    from relation_buyer_lesson bl, relation_trainer_lesson tl, info_detail_trainer dt
+    where bl.trainer_lesson_id = tl.id
+    and buyer_id = #{buyer_id,jdbcType=INTEGER}
+    and tl.trainer_id = dt.id
+  </select>
+
+  <!--查询教练-->
+  <select id="getTrainer" resultMap="BaseResultMap">
+    select *
+    from info_detail_trainer
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+
   <select id="selectCredentialByTrainerId" resultMap="com.zju.cst.simplefitserver.dao.mapper.InfoCredentialMapper.BaseResultMap" parameterType="java.lang.Integer">
     select
     ic.*
@@ -131,4 +152,12 @@
       validation = #{validation,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!--获取教练登录时信息-->
+  <select id="getInfo" resultType="com.zju.cst.simplefitserver.model.vo.User">
+    select info_user.*, info_detail_trainer.id typeId
+    from info_user, info_detail_trainer
+    where username = #{username,jdbcType=VARCHAR}
+    and info_user.id = info_detail_trainer.user_id
+  </select>
 </mapper>

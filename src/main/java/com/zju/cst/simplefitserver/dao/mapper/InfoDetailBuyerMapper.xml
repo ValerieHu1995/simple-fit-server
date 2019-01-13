@@ -31,6 +31,41 @@
       #{expireTime,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}, #{updateTime,jdbcType=VARCHAR}, 
       #{validation,jdbcType=INTEGER})
   </insert>
+
+  <!--根据 userId 获取 buyerId-->
+  <select id="getBuyer" resultMap="BaseResultMap">
+    select *
+    from info_detail_buyer
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+
+  <!--获取用户的登录时信息-->
+  <select id="getInfo" resultType="com.zju.cst.simplefitserver.model.vo.User">
+    select info_user.*, info_detail_buyer.id typeId
+    from info_user, info_detail_buyer
+    where username = #{username,jdbcType=VARCHAR}
+    and info_user.id = info_detail_buyer.user_id
+  </select>
+
+  <!--用户买卡-->
+  <!--和钱相关-->
+  <update id="buyCard">
+    insert into relation_user_wallet(buyer_id, wallet_id, money, create_time, spending, trainer_lesson_id)
+    values (#{buyerId,jdbcType=INTEGER}, #{walletId,jdbcType=INTEGER}, #{money,jdbcType=INTEGER}, #{createTime,jdbcType=INTEGER}, 0, 0);
+    update info_detail_buyer
+    set
+    obtain_time = #{obtainTime,jdbcType=VARCHAR},
+    expire_time = #{expireTime,jdbcType=VARCHAR}
+    where id = #{buyerId,jdbcType=INTEGER};
+  </update>
+
+  <!--用户买课-->
+  <!--和钱相关-->
+  <insert id="buyLesson">
+    insert into relation_user_wallet(buyer_id, wallet_id, money, create_time, spending, trainer_lesson_id)
+    values (#{buyerId,jdbcType=INTEGER}, (select owner_id from info_shop where id in (select shop_id from relation_trainer_lesson where id = #{trainerLessonId,jdbcType=INTEGER})), #{money,jdbcType=INTEGER}, #{createTime,jdbcType=INTEGER}, 1, #{trainerLessonId,jdbcType=INTEGER});
+  </insert>
+
   <insert id="insertSelective" parameterType="com.zju.cst.simplefitserver.model.InfoDetailBuyer" >
     insert into info_detail_buyer
     <trim prefix="(" suffix=")" suffixOverrides="," >

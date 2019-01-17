@@ -3,6 +3,7 @@ package com.zju.cst.simplefitserver.model;
 import java.io.Serializable;
 
 public class InfoCredential implements Serializable {
+
     private Integer id;
 
     private String name;

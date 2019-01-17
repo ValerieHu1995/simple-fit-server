@@ -1,19 +1,35 @@
 package com.zju.cst.simplefitserver.dao.mapper;
 
 import com.zju.cst.simplefitserver.model.RelationTrainerLesson;
-import org.apache.ibatis.annotations.Mapper;
+import com.zju.cst.simplefitserver.model.vo.RealLesson;
+import org.apache.ibatis.annotations.Param;
 
-@Mapper
+import java.util.List;
+
 public interface RelationTrainerLessonMapper {
-    int deleteByPrimaryKey(Integer id);
+  int deleteByPrimaryKey(Integer id);
 
-    int insert(RelationTrainerLesson record);
+  // 教练开课
+  int insert(RelationTrainerLesson record);
 
-    int insertSelective(RelationTrainerLesson record);
+  int insertSelective(RelationTrainerLesson record);
 
-    RelationTrainerLesson selectByPrimaryKey(Integer id);
+  RelationTrainerLesson selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(RelationTrainerLesson record);
+  // 教练修改课程
+  int updateByPrimaryKeySelective(RelationTrainerLesson record);
 
-    int updateByPrimaryKey(RelationTrainerLesson record);
+  int updateByPrimaryKey(RelationTrainerLesson record);
+
+  // 根据教练获取课程
+  List<RelationTrainerLesson> selectByTrainerId(Integer id);
+
+  // 根据地点查询课程
+  List<RelationTrainerLesson> selectByPlace(String place);
+
+  // 获取全部课程
+  List<RealLesson> getAllLessons();
+
+  // 获取我的课程
+  List<RealLesson> getMyLessons(@Param("buyer_id") Integer buyerId);
 }

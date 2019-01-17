@@ -3,73 +3,93 @@ package com.zju.cst.simplefitserver.model;
 import java.io.Serializable;
 
 public class RelationUserWallet implements Serializable {
-    private Integer id;
+  private Integer id;
 
-    private Integer buyerId;
+  private Integer buyerId;
 
-    private Integer walletId;
+  private Integer walletId;
 
-    private Integer money;
+  private Integer money;
 
-    private Integer createTime;
+  private Integer createTime;
 
-    private Integer updateTime;
+  private Integer updateTime;
 
-    private Integer validation;
+  private Integer validation;
 
-    public Integer getId() {
-        return id;
-    }
+  private Integer spending; // 0 代表购买卡 1 代表购买课 值得注意的是办卡的钱到商家 开课的钱到教练
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+  private Integer trainerLessonId; // 这节课的 id
 
-    public Integer getBuyerId() {
-        return buyerId;
-    }
+  public Integer getId() {
+    return id;
+  }
 
-    public void setBuyerId(Integer buyerId) {
-        this.buyerId = buyerId;
-    }
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-    public Integer getWalletId() {
-        return walletId;
-    }
+  public Integer getBuyerId() {
+    return buyerId;
+  }
 
-    public void setWalletId(Integer walletId) {
-        this.walletId = walletId;
-    }
+  public void setBuyerId(Integer buyerId) {
+    this.buyerId = buyerId;
+  }
 
-    public Integer getMoney() {
-        return money;
-    }
+  public Integer getWalletId() {
+    return walletId;
+  }
 
-    public void setMoney(Integer money) {
-        this.money = money;
-    }
+  public void setWalletId(Integer walletId) {
+    this.walletId = walletId;
+  }
 
-    public Integer getCreateTime() {
-        return createTime;
-    }
+  public Integer getMoney() {
+    return money;
+  }
 
-    public void setCreateTime(Integer createTime) {
-        this.createTime = createTime;
-    }
+  public void setMoney(Integer money) {
+    this.money = money;
+  }
 
-    public Integer getUpdateTime() {
-        return updateTime;
-    }
+  public Integer getCreateTime() {
+    return createTime;
+  }
 
-    public void setUpdateTime(Integer updateTime) {
-        this.updateTime = updateTime;
-    }
+  public void setCreateTime(Integer createTime) {
+    this.createTime = createTime;
+  }
 
-    public Integer getValidation() {
-        return validation;
-    }
+  public Integer getUpdateTime() {
+    return updateTime;
+  }
 
-    public void setValidation(Integer validation) {
-        this.validation = validation;
-    }
+  public void setUpdateTime(Integer updateTime) {
+    this.updateTime = updateTime;
+  }
+
+  public Integer getValidation() {
+    return validation;
+  }
+
+  public void setValidation(Integer validation) {
+    this.validation = validation;
+  }
+
+  public Integer getSpending() {
+    return spending;
+  }
+
+  public void setSpending(Integer spending) {
+    this.spending = spending;
+  }
+
+  public Integer getTrainerLessonId() {
+    return trainerLessonId;
+  }
+
+  public void setTrainerLessonId(Integer trainerLessonId) {
+    this.trainerLessonId = trainerLessonId;
+  }
 }

@@ -1,189 +1,238 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.zju.cst.simplefitserver.dao.mapper.RelationTrainerLessonMapper" >
-  <resultMap id="BaseResultMap" type="com.zju.cst.simplefitserver.model.RelationTrainerLesson" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="trainer_credential_id" property="trainerCredentialId" jdbcType="INTEGER" />
-    <result column="lesson__id" property="lessonCredentialId" jdbcType="INTEGER" />
-    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
-    <result column="capacity" property="capacity" jdbcType="INTEGER" />
-    <result column="frequency" property="frequency" jdbcType="INTEGER" />
-    <result column="time" property="time" jdbcType="VARCHAR" />
-    <result column="status" property="status" jdbcType="INTEGER" />
-    <result column="confirm_trainer" property="confirmTrainer" jdbcType="INTEGER" />
-    <result column="confirm_seller" property="confirmSeller" jdbcType="INTEGER" />
-    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
-    <result column="update_time" property="updateTime" jdbcType="VARCHAR" />
-    <result column="validatCCCCion" property="validation" jdbcType="INTEGER" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    id, name, trainer_credential_id, lesson_credential_id, shop_id, capacity, frequency,
-    time, status, confirm_trainer, confirm_seller, create_time, update_time, validation
+<mapper namespace="com.zju.cst.simplefitserver.dao.mapper.RelationTrainerLessonMapper">
+    <resultMap id="BaseResultMap" type="com.zju.cst.simplefitserver.model.RelationTrainerLesson">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="trainer_id" property="trainerId" jdbcType="INTEGER"/>
+        <result column="lesson_id" property="lessonId" jdbcType="INTEGER"/>
+        <result column="shop_id" property="shopId" jdbcType="INTEGER"/>
+        <result column="capacity" property="capacity" jdbcType="INTEGER"/>
+        <result column="frequency" property="frequency" jdbcType="INTEGER"/>
+        <result column="time" property="time" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="confirm_trainer" property="confirmTrainer" jdbcType="INTEGER"/>
+        <result column="confirm_seller" property="confirmSeller" jdbcType="INTEGER"/>
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="VARCHAR"/>
+        <result column="update_time" property="updateTime" jdbcType="VARCHAR"/>
+        <result column="validation" property="validation" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, name, trainer_id, lesson_id, shop_id, capacity, frequency, time, status, confirm_trainer, 
+    confirm_seller, type, create_time, update_time, validation
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from relation_trainer_lesson
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from relation_trainer_lesson
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <!--根据教练 id 获取全部课程-->
+    <select id="selectByTrainerId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select relation_trainer_lesson.*
+        from relation_trainer_lesson
+        where trainer_id = #{trainer_id,jdbcType=INTEGER}
+      </select>
+
+    <!--根据地点查询课程-->
+    <select id="selectByPlace" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select tl.*
+        from relation_trainer_lesson tl, info_shop
+        where tl.shop_id = info_shop.id
+        and info_shop.name like concat('%',#{place,jdbcType=VARCHAR},'%')
+      </select>
+
+    <!--获取全部课程-->
+    <select id="getAllLessons" resultType="com.zju.cst.simplefitserver.model.vo.RealLesson">
+        select dt.id trainerId, realname, tl.id trainerLessonId, lesson_id lessonId, tl.capacity lessonCapacity, tl.time,
+                info_lesson.`name` category, type, frequency, shop_id shopId, info_shop.`name` shopName, address, info_shop.capacity shopCapacity, owner_id ownerId
+        from relation_trainer_lesson tl, info_lesson, info_shop, info_detail_trainer dt
+        where tl.lesson_id = info_lesson.id
+        and tl.shop_id = info_shop.id
+        and tl.trainer_id = dt.id
+      </select>
+
+    <!--获取我的课程-->
+    <select id="getMyLessons" resultType="com.zju.cst.simplefitserver.model.vo.RealLesson">
+        select dt.id trainerId, realname, tl.id trainerLessonId, lesson_id lessonId, tl.capacity lessonCapacity, tl.time, info_lesson.`name` category, type, frequency, shop_id shopId, info_shop.`name` shopName, address, info_shop.capacity shopCapacity, owner_id ownerId
+        from relation_trainer_lesson tl, info_lesson, info_shop, info_detail_trainer dt, relation_buyer_lesson bl
+        where tl.lesson_id = info_lesson.id
+        and tl.shop_id = info_shop.id
+        and tl.trainer_id = dt.id
+        and bl.buyer_id = #{buyer_id,jdbcType=INTEGER}
+        and bl.trainer_l esson_id = tl.id
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from relation_trainer_lesson
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson" >
-    insert into relation_trainer_lesson (id, name, trainer_credential_id, 
-      lesson_credential_id, shop_id, capacity,
+    <insert id="insert" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson">
+    insert into relation_trainer_lesson (id, name, trainer_id, 
+      lesson_id, shop_id, capacity, 
       frequency, time, status, 
-      confirm_trainer, confirm_seller, create_time, 
-      update_time, validation)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{trainerCredentialId,jdbcType=INTEGER}, 
-      #{lessonCredentialId,jdbcType=INTEGER}, #{shopId,jdbcType=INTEGER}, #{capacity,jdbcType=INTEGER},
+      confirm_trainer, confirm_seller, type, 
+      create_time, update_time, validation
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{trainerId,jdbcType=INTEGER}, 
+      #{lessonId,jdbcType=INTEGER}, #{shopId,jdbcType=INTEGER}, #{capacity,jdbcType=INTEGER}, 
       #{frequency,jdbcType=INTEGER}, #{time,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
-      #{confirmTrainer,jdbcType=INTEGER}, #{confirmSeller,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, 
-      #{updateTime,jdbcType=VARCHAR}, #{validation,jdbcType=INTEGER})
+      #{confirmTrainer,jdbcType=INTEGER}, #{confirmSeller,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=VARCHAR}, #{updateTime,jdbcType=VARCHAR}, #{validation,jdbcType=INTEGER}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson" >
-    insert into relation_trainer_lesson
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="name != null" >
-        name,
-      </if>
-      <if test="trainerCredentialId != null" >
-        trainer_credential_id,
-      </if>
-      <if test="lessonCredentialId != null" >
-        lesson_credential_id,
-      </if>
-      <if test="shopId != null" >
-        shop_id,
-      </if>
-      <if test="capacity != null" >
-        capacity,
-      </if>
-      <if test="frequency != null" >
-        frequency,
-      </if>
-      <if test="time != null" >
-        time,
-      </if>
-      <if test="status != null" >
-        status,
-      </if>
-      <if test="confirmTrainer != null" >
-        confirm_trainer,
-      </if>
-      <if test="confirmSeller != null" >
-        confirm_seller,
-      </if>
-      <if test="createTime != null" >
-        create_time,
-      </if>
-      <if test="updateTime != null" >
-        update_time,
-      </if>
-      <if test="validation != null" >
-        validation,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="trainerCredentialId != null" >
-        #{trainerCredentialId,jdbcType=INTEGER},
-      </if>
-      <if test="lessonCredentialId != null" >
-        #{lessonCredentialId,jdbcType=INTEGER},
-      </if>
-      <if test="shopId != null" >
-        #{shopId,jdbcType=INTEGER},
-      </if>
-      <if test="capacity != null" >
-        #{capacity,jdbcType=INTEGER},
-      </if>
-      <if test="frequency != null" >
-        #{frequency,jdbcType=INTEGER},
-      </if>
-      <if test="time != null" >
-        #{time,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null" >
-        #{status,jdbcType=INTEGER},
-      </if>
-      <if test="confirmTrainer != null" >
-        #{confirmTrainer,jdbcType=INTEGER},
-      </if>
-      <if test="confirmSeller != null" >
-        #{confirmSeller,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=VARCHAR},
-      </if>
-      <if test="updateTime != null" >
-        #{updateTime,jdbcType=VARCHAR},
-      </if>
-      <if test="validation != null" >
-        #{validation,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson" >
-    update relation_trainer_lesson
-    <set >
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="trainerCredentialId != null" >
-        trainer_credential_id = #{trainerCredentialId,jdbcType=INTEGER},
-      </if>
-      <if test="lessonCredentialId != null" >
-        lesson_credential_id = #{lessonCredentialId,jdbcType=INTEGER},
-      </if>
-      <if test="shopId != null" >
-        shop_id = #{shopId,jdbcType=INTEGER},
-      </if>
-      <if test="capacity != null" >
-        capacity = #{capacity,jdbcType=INTEGER},
-      </if>
-      <if test="frequency != null" >
-        frequency = #{frequency,jdbcType=INTEGER},
-      </if>
-      <if test="time != null" >
-        time = #{time,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null" >
-        status = #{status,jdbcType=INTEGER},
-      </if>
-      <if test="confirmTrainer != null" >
-        confirm_trainer = #{confirmTrainer,jdbcType=INTEGER},
-      </if>
-      <if test="confirmSeller != null" >
-        confirm_seller = #{confirmSeller,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=VARCHAR},
-      </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=VARCHAR},
-      </if>
-      <if test="validation != null" >
-        validation = #{validation,jdbcType=INTEGER},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson" >
+    <insert id="insertSelective" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson">
+        insert into relation_trainer_lesson
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="trainerId != null">
+                trainer_id,
+            </if>
+            <if test="lessonId != null">
+                lesson_id,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="capacity != null">
+                capacity,
+            </if>
+            <if test="frequency != null">
+                frequency,
+            </if>
+            <if test="time != null">
+                time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="confirmTrainer != null">
+                confirm_trainer,
+            </if>
+            <if test="confirmSeller != null">
+                confirm_seller,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="validation != null">
+                validation,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="trainerId != null">
+                #{trainerId,jdbcType=INTEGER},
+            </if>
+            <if test="lessonId != null">
+                #{lessonId,jdbcType=INTEGER},
+            </if>
+            <if test="shopId != null">
+                #{shopId,jdbcType=INTEGER},
+            </if>
+            <if test="capacity != null">
+                #{capacity,jdbcType=INTEGER},
+            </if>
+            <if test="frequency != null">
+                #{frequency,jdbcType=INTEGER},
+            </if>
+            <if test="time != null">
+                #{time,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="confirmTrainer != null">
+                #{confirmTrainer,jdbcType=INTEGER},
+            </if>
+            <if test="confirmSeller != null">
+                #{confirmSeller,jdbcType=INTEGER},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="validation != null">
+                #{validation,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson">
+        update relation_trainer_lesson
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="trainerId != null">
+                trainer_id = #{trainerId,jdbcType=INTEGER},
+            </if>
+            <if test="lessonId != null">
+                lesson_id = #{lessonId,jdbcType=INTEGER},
+            </if>
+            <if test="shopId != null">
+                shop_id = #{shopId,jdbcType=INTEGER},
+            </if>
+            <if test="capacity != null">
+                capacity = #{capacity,jdbcType=INTEGER},
+            </if>
+            <if test="frequency != null">
+                frequency = #{frequency,jdbcType=INTEGER},
+            </if>
+            <if test="time != null">
+                time = #{time,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="confirmTrainer != null">
+                confirm_trainer = #{confirmTrainer,jdbcType=INTEGER},
+            </if>
+            <if test="confirmSeller != null">
+                confirm_seller = #{confirmSeller,jdbcType=INTEGER},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="validation != null">
+                validation = #{validation,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.zju.cst.simplefitserver.model.RelationTrainerLesson">
     update relation_trainer_lesson
     set name = #{name,jdbcType=VARCHAR},
-      trainer_credential_id = #{trainerCredentialId,jdbcType=INTEGER},
-      lesson_credential_id = #{lessonCredentialId,jdbcType=INTEGER},
+      trainer_id = #{trainerId,jdbcType=INTEGER},
+      lesson_id = #{lessonId,jdbcType=INTEGER},
       shop_id = #{shopId,jdbcType=INTEGER},
       capacity = #{capacity,jdbcType=INTEGER},
       frequency = #{frequency,jdbcType=INTEGER},
@@ -191,6 +240,7 @@
       status = #{status,jdbcType=INTEGER},
       confirm_trainer = #{confirmTrainer,jdbcType=INTEGER},
       confirm_seller = #{confirmSeller,jdbcType=INTEGER},
+      type = #{type,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=VARCHAR},
       update_time = #{updateTime,jdbcType=VARCHAR},
       validation = #{validation,jdbcType=INTEGER}

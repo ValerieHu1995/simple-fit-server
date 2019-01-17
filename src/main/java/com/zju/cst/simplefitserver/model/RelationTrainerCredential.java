@@ -7,7 +7,7 @@ public class RelationTrainerCredential implements Serializable {
 
     private Integer trainerId;
 
-    private Integer credentialId;
+    private Integer credentailId;
 
     private Integer status;
 
@@ -37,12 +37,12 @@ public class RelationTrainerCredential implements Serializable {
         this.trainerId = trainerId;
     }
 
-    public Integer getCredentialId() {
-        return credentialId;
+    public Integer getCredentailId() {
+        return credentailId;
     }
 
-    public void setCredentialId(Integer credentialId) {
-        this.credentialId = credentialId;
+    public void setCredentailId(Integer credentailId) {
+        this.credentailId = credentailId;
     }
 
     public Integer getStatus() {

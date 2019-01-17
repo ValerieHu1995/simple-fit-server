@@ -31,6 +31,8 @@ public class InfoUser implements Serializable {
 
     private Integer validation;
 
+    private Integer type;
+
     public Integer getId() {
         return id;
     }
@@ -141,5 +143,13 @@ public class InfoUser implements Serializable {
 
     public void setValidation(Integer validation) {
         this.validation = validation;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

@@ -5,17 +5,22 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface InfoUserMapper {
-    int deleteByPrimaryKey(Integer id);
+  int deleteByPrimaryKey(Integer id);
 
-    int insert(InfoUser record);
+  int insert(InfoUser record);
 
-    int insertSelective(InfoUser record);
+  int insertSelective(InfoUser record);
 
-    InfoUser selectByPrimaryKey(Integer id);
+  InfoUser selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(InfoUser record);
+  int updateByPrimaryKeySelective(InfoUser record);
 
-    int updateByPrimaryKey(InfoUser record);
+  int updateByPrimaryKey(InfoUser record);
 
-    InfoUser selectByUsername(String username);
+  // 根据用户名获取用户信息
+  InfoUser selectByUsername(String username);
+
+  // 注册用户
+  int registerByType(String username, String password, int type);
+
 }

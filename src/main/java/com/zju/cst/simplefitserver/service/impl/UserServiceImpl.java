@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private InfoUserMapper infoUserMapper;
+  @Autowired
+  private InfoUserMapper infoUserMapper;
 
     /*
           cacheNames: 缓存名，用于管理
@@ -24,20 +24,24 @@ public class UserServiceImpl implements UserService {
 
     */
 
-    @Override
-    @Cacheable(cacheNames = "GetUserInfoByName", keyGenerator = "MethodNameAndArgsKey", unless = "#result==null")
-    public InfoUser getUserInfoByName(String name) {
-        return infoUserMapper.selectByUsername(name);
-    }
+  @Override
+  @Cacheable(cacheNames = "GetUserInfoByName", keyGenerator = "MethodNameAndArgsKey", unless = "#result==null")
+  public InfoUser getUserInfoByName(String name) {
+    return this.infoUserMapper.selectByUsername(name);
+  }
 
-    @Override
-    public int insertSelective(InfoUser record) {
-        return infoUserMapper.insertSelective(record);
-    }
+  @Override
+  public int insertSelective(InfoUser record) {
+    return this.infoUserMapper.insertSelective(record);
+  }
 
-    @Override
-    public int updateByPrimaryKeySelective(InfoUser record) {
-        return infoUserMapper.updateByPrimaryKeySelective(record);
-    }
+  @Override
+  public int updateByPrimaryKeySelective(InfoUser record) {
+    return this.infoUserMapper.updateByPrimaryKeySelective(record);
+  }
 
+  @Override
+  public int registerByType(String username, String password, int type) {
+    return infoUserMapper.registerByType(username, password, type);
+  }
 }

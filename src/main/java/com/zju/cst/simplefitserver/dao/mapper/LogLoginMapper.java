@@ -3,7 +3,6 @@ package com.zju.cst.simplefitserver.dao.mapper;
 import com.zju.cst.simplefitserver.model.LogLogin;
 import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
 public interface LogLoginMapper {
     int deleteByPrimaryKey(Integer id);
 

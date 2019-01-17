@@ -13,27 +13,27 @@ import java.util.Map;
 @Configuration
 public class ShiroConfig {
 
-    @Bean(name = "userShiroRealm")
-    public UserShiroRealm getUserRealm(){
+  @Bean(name = "userShiroRealm")
+  public UserShiroRealm getUserRealm() {
 
-        return new UserShiroRealm();
-    }
+    return new UserShiroRealm();
+  }
 
-    @Bean(name="userSecurityManager")
-    public DefaultWebSecurityManager getUserWebSecurityManager(@Qualifier("userShiroRealm")UserShiroRealm userShiroRealm){
+  @Bean(name = "userSecurityManager")
+  public DefaultWebSecurityManager getUserWebSecurityManager(@Qualifier("userShiroRealm") UserShiroRealm userShiroRealm) {
 
-        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+    DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
 
-        securityManager.setRealm(userShiroRealm);
-        return securityManager;
-    }
+    securityManager.setRealm(userShiroRealm);
+    return securityManager;
+  }
 
-    @Bean(name="userShiroFilterFactoryBean")
-    public ShiroFilterFactoryBean getUserShiroFilterFactoryBean(@Qualifier("userSecurityManager")DefaultWebSecurityManager defaultWebSecurityManager){
+  @Bean(name = "userShiroFilterFactoryBean")
+  public ShiroFilterFactoryBean getUserShiroFilterFactoryBean(@Qualifier("userSecurityManager") DefaultWebSecurityManager defaultWebSecurityManager) {
 
-        ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
+    ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 
-        shiroFilterFactoryBean.setSecurityManager(defaultWebSecurityManager);
+    shiroFilterFactoryBean.setSecurityManager(defaultWebSecurityManager);
 
         /*
             添加过滤器拦截(url)
@@ -46,10 +46,10 @@ public class ShiroConfig {
          */
 
 
-        Map<String,String> filterMap = new LinkedHashMap<String,String>();
+    Map<String, String> filterMap = new LinkedHashMap<String, String>();
 
-        filterMap.put("/user/*/info", "authc");
-        filterMap.put("company/*/info", "authc");
+    filterMap.put("/user/*/info", "authc");
+    filterMap.put("company/*/info", "authc");
 
 
         /*
@@ -62,16 +62,15 @@ public class ShiroConfig {
          */
 
 
+    //设置登录页面，authc没通过会跳转
 
-        //设置登录页面，authc没通过会跳转
+    shiroFilterFactoryBean.setLoginUrl("/user/unlogin");
 
-        shiroFilterFactoryBean.setLoginUrl("/user/unlogin");
+    shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
 
-        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
+    return shiroFilterFactoryBean;
 
-        return shiroFilterFactoryBean;
-
-    }
+  }
 
 
 }

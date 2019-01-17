@@ -7,7 +7,7 @@ public class RelationTrainerLesson implements Serializable {
 
     private String name;
 
-    private Integer trainerCredentialId;
+    private Integer trainerId;
 
     private Integer lessonId;
 
@@ -24,6 +24,8 @@ public class RelationTrainerLesson implements Serializable {
     private Integer confirmTrainer;
 
     private Integer confirmSeller;
+
+    private Integer type;
 
     private String createTime;
 
@@ -47,12 +49,12 @@ public class RelationTrainerLesson implements Serializable {
         this.name = name == null ? null : name.trim();
     }
 
-    public Integer getTrainerCredentialId() {
-        return trainerCredentialId;
+    public Integer getTrainerId() {
+        return trainerId;
     }
 
-    public void setTrainerCredentialId(Integer trainerCredentialId) {
-        this.trainerCredentialId = trainerCredentialId;
+    public void setTrainerId(Integer trainerId) {
+        this.trainerId = trainerId;
     }
 
     public Integer getLessonId() {
@@ -119,6 +121,14 @@ public class RelationTrainerLesson implements Serializable {
         this.confirmSeller = confirmSeller;
     }
 
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
     public String getCreateTime() {
         return createTime;
     }
@@ -141,5 +151,27 @@ public class RelationTrainerLesson implements Serializable {
 
     public void setValidation(Integer validation) {
         this.validation = validation;
+    }
+    // 测试用
+
+    @Override
+    public String toString() {
+        return "RelationTrainerLesson{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", trainerId=" + trainerId +
+            ", lessonId=" + lessonId +
+            ", shopId=" + shopId +
+            ", capacity=" + capacity +
+            ", frequency=" + frequency +
+            ", time='" + time + '\'' +
+            ", status=" + status +
+            ", confirmTrainer=" + confirmTrainer +
+            ", confirmSeller=" + confirmSeller +
+            ", type=" + type +
+            ", createTime='" + createTime + '\'' +
+            ", updateTime='" + updateTime + '\'' +
+            ", validation=" + validation +
+            '}';
     }
 }

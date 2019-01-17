@@ -44,5 +44,4 @@ public class UserServiceImpl implements UserService {
   public int registerByType(String username, String password, int type) {
     return infoUserMapper.registerByType(username, password, type);
   }
-
 }

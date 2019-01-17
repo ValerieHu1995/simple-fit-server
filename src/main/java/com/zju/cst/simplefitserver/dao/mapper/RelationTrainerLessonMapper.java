@@ -3,7 +3,6 @@ package com.zju.cst.simplefitserver.dao.mapper;
 import com.zju.cst.simplefitserver.model.RelationTrainerLesson;
 import com.zju.cst.simplefitserver.model.vo.RealLesson;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 

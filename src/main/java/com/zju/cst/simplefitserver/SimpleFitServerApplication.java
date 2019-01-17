@@ -15,4 +15,5 @@ public class SimpleFitServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SimpleFitServerApplication.class, args);
     }
+
 }

@@ -4,10 +4,12 @@ import com.zju.cst.simplefitserver.model.InfoCredential;
 import com.zju.cst.simplefitserver.model.InfoDetailTrainer;
 import com.zju.cst.simplefitserver.model.InfoLesson;
 import com.zju.cst.simplefitserver.model.vo.User;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+@Mapper
 public interface InfoDetailTrainerMapper {
   int deleteByPrimaryKey(Integer id);
 

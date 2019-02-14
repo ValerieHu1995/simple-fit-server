@@ -3,10 +3,12 @@ package com.zju.cst.simplefitserver.dao.mapper;
 import com.zju.cst.simplefitserver.model.InfoDetailSeller;
 import com.zju.cst.simplefitserver.model.vo.ShopAndSeller;
 import com.zju.cst.simplefitserver.model.vo.User;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+@Mapper
 public interface InfoDetailSellerMapper {
   int deleteByPrimaryKey(Integer id);
 

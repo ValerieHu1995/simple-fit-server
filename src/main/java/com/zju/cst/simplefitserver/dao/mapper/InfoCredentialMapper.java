@@ -3,6 +3,7 @@ package com.zju.cst.simplefitserver.dao.mapper;
 import com.zju.cst.simplefitserver.model.InfoCredential;
 import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface InfoCredentialMapper {
     int deleteByPrimaryKey(Integer id);
 
